@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.Main {
+  margin: 5%;
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  border: 1px solid black;   
+}
+
+.Date {
+  text-align: left;
+  margin: 5%;
+}
+
+.label {
+  font-weight: bold;
+  font-size: larger;
+  padding-right: 15px;
+  /* margin-bottom: 15%; */
+}
