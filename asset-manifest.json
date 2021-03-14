@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/panurut-ch/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/panurut-ch/static/js/main.92642bf3.chunk.js",
+    "main.js.map": "/panurut-ch/static/js/main.92642bf3.chunk.js.map",
+    "runtime-main.js": "/panurut-ch/static/js/runtime-main.fce5a364.js",
+    "runtime-main.js.map": "/panurut-ch/static/js/runtime-main.fce5a364.js.map",
+    "static/js/2.5c2d83f5.chunk.js": "/panurut-ch/static/js/2.5c2d83f5.chunk.js",
+    "static/js/2.5c2d83f5.chunk.js.map": "/panurut-ch/static/js/2.5c2d83f5.chunk.js.map",
+    "static/js/3.d3564f34.chunk.js": "/panurut-ch/static/js/3.d3564f34.chunk.js",
+    "static/js/3.d3564f34.chunk.js.map": "/panurut-ch/static/js/3.d3564f34.chunk.js.map",
+    "index.html": "/panurut-ch/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/panurut-ch/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.5c2d83f5.chunk.js.LICENSE.txt": "/panurut-ch/static/js/2.5c2d83f5.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/panurut-ch/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fce5a364.js",
+    "static/js/2.5c2d83f5.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.92642bf3.chunk.js"
+  ]
+}
