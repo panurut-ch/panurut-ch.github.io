@@ -4,21 +4,35 @@ import MaterialTable from "material-table";
 import BlockUi from "react-block-ui";
 import "react-block-ui/style.css";
 
+const DEFAULT_THROTTLING = 2500;
+
 export const Table = () => {
   const api = "https://604c46ffd3e3e10017d51751.mockapi.io/api/v1/data1";
 
   const [data, setData] = useState([]);
-  const [blocking, setblocking] = useState([]);
+  const [blocking, setBlocking] = useState(true);
+
+  // Blocking ui when paging
+  const [changePage, setChangePage] = useState(false);
 
   useEffect(() => {
     fetch(api)
       .then((res) => res.json())
       .then((data) => setData(data))
-      .then((date) => setblocking(!blocking));
-    console.log("🚀 ~ file: App.js ~ line 31 ~ useEffect ~ data", data);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+      .then(() => setBlocking(false));
   }, []);
 
+  // mockup loading blocked ui
+  useEffect(() => {
+    if (blocking && changePage) {
+      setTimeout(() => {
+        setBlocking(false);
+        setChangePage(false);
+      }, DEFAULT_THROTTLING);
+    }
+  }, [ blocking, changePage ]);
+
+  // pre assign column from api
   const columns = [
     {
       title: "ID",
@@ -38,6 +52,12 @@ export const Table = () => {
     },
   ];
 
+  // setState for blocking ui
+  const onChangePage = () => {
+    setBlocking(true);
+    setChangePage(true);
+  }
+
   return (
     <BlockUi tag="div" blocking={blocking}>
       <div>
@@ -45,6 +65,7 @@ export const Table = () => {
           title="Data Table"
           data={data}
           columns={columns}
+          onChangePage={onChangePage}
           options={{
             grouping: true,
           }}

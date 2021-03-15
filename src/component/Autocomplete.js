@@ -1,19 +1,25 @@
 /* eslint-disable no-use-before-define */
 import React, { useState, useEffect } from "react";
-import TextField from "@material-ui/core/TextField";
+import { Grid, TextField } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
 
 export default function Autocompleter() {
   const api = "https://604c46ffd3e3e10017d51751.mockapi.io/api/v1/data1";
 
   const [data, setData] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  useEffect(() => {
+  const loadData = () => {
     fetch(api)
       .then((res) => res.json())
-      .then((data) => setData(data));
-    console.log("🚀 ~ file: App.js ~ line 31 ~ useEffect ~ data", data);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+      .then((data) => setData(data))
+      .catch((message) => setErrorMessage(message));
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      loadData();
+    }, 5000);
   }, []);
 
   const defaultProps = {
@@ -22,15 +28,18 @@ export default function Autocompleter() {
   };
 
   return (
-    <div style={{ width: 300 }}>
-      <Autocomplete
-        {...defaultProps}
-        id="First Name"
-        debug
-        renderInput={(params) => (
-          <TextField {...params} label="First Name" margin="normal" />
-        )}
-      />
-    </div>
+    <Grid container>
+      <Grid item xs={12}>
+        <Autocomplete
+          {...defaultProps}
+          id="First Name"
+          debug
+          fullWidth
+          renderInput={(params) => (
+            <TextField {...params} label="First Name" error={errorMessage} />
+          )}
+        />
+      </Grid>
+    </Grid>
   );
 }
