@@ -1,5 +1,5 @@
 ### Deploy Status
-[![Netlify Status](https://api.netlify.com/api/v1/badges/eebf8a73-a03b-4988-a52f-0c3083a19297/deploy-status)](https://app.netlify.com/sites/romantic-hamilton-15d8e2/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eebf8a73-a03b-4988-a52f-0c3083a19297/deploy-status)](https://app.netlify.com/sites/react-panurut/deploys)
 
 ### Website
 - [Main Link](https://panurut-ch.github.io/)
