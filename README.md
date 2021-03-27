@@ -23,7 +23,7 @@ npm run build
 
 **Deploy Github page**
 ```sh
-npm run build
+npm run deploy
 ```
 
 ### Library Usage
