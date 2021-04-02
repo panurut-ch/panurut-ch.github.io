@@ -29,7 +29,12 @@ export default class Navbar extends Component {
           <div className="container">
             <div className="navbar-brand">
               <a className="navbar-item" href="https://panurut-ch.github.io/">
-                PANURUT
+                <img
+                  src={process.env.PUBLIC_URL + "/images/PNR.png"}
+                  alt="PNR LOGO"
+                  width="100"
+                  height="100%"
+                />
               </a>
             </div>
             <div className="navbar-menu">
@@ -69,6 +74,13 @@ export default class Navbar extends Component {
                   className="navbar-item"
                 >
                   Autocomplete
+                </NavLink>
+                <NavLink
+                  to="/checkout"
+                  activeClassName="is-active"
+                  className="navbar-item"
+                >
+                  Checkout
                 </NavLink>
                 <a
                   className="navbar-item"

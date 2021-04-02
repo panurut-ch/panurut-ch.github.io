@@ -7,6 +7,7 @@ import Datepicker from "../component/Datepicker";
 import Form from "../component/Form";
 import Table from "../component/Table";
 import Index from "../component/index";
+import Checkout from "../component/checkout/Checkout";
 
 export default () => (
   <Switch>
@@ -15,5 +16,6 @@ export default () => (
     <Route exact path="/date" component={Datepicker} />
     <Route exact path="/form" component={Form} />
     <Route exact path="/auto" component={Autocomplete} />
+    <Route exact path="/checkout" component={Checkout} />
   </Switch>
 );

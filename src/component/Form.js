@@ -34,12 +34,24 @@ export default class Form extends Component {
         <Grid item md={4}>
           <form onSubmit={this.handleSubmit}>
             <Grid container spacing={3}>
-              <Grid item md={12}>
+              <Grid item md={6}>
                 <div>
                   <TextField
                     required
                     id="outlined-required"
                     label="First Name"
+                    variant="outlined"
+                    value={this.state.value}
+                    onChange={this.handleChange}
+                  />
+                </div>
+              </Grid>
+              <Grid item md={6}>
+                <div>
+                  <TextField
+                    required
+                    id="outlined-required"
+                    label="Last Name"
                     variant="outlined"
                     value={this.state.value}
                     onChange={this.handleChange}
